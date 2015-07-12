@@ -128,7 +128,7 @@ header {
     font-weight: 300;
 }
 #info .button-container {
-    bottom: 7vh;
+    bottom: 9vh;
 }
 .button, .button:link, .button:active, .button:visited {
     border: 0px;
