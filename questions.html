@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'/>
+
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="screen.css"/>
+    
 </head>
 <body class="background questions">
 <header>
@@ -49,9 +52,9 @@
 
                 <form>
                     <div class="row">
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
+                        <div class="col-md-4"><input type="text" id="first_textbox_1" class="form-control input-lg"></div>
+                        <div class="col-md-4"><input type="text" id="first_textbox_2" class="form-control input-lg"></div>
+                        <div class="col-md-4"><input type="text" id="first_textbox_3" class="form-control input-lg"></div>
                     </div>
                 </form>
             </div>
@@ -76,24 +79,24 @@
                 <h2>Which of these images resonates most when thinking about "digital"?</h2>
 
                 <div class="row">
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_1.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img id="img_1" src="img/q_img_1.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_2.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img  id="img_2" src="img/q_img_2.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_3.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img  id="img_3" src="img/q_img_3.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_4.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img  id="img_4" src="img/q_img_4.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_5.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img  id="img_5" src="img/q_img_5.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
-                    <div class="col-xs-4 col-md-4 text-center"><label><img src="img/q_img_6.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
+                    <div class="col-xs-4 col-md-4 text-center"><label><img  id="img_6" src="img/q_img_6.png" class="img-responsive img-thumbnail" alt=""><span><input type="radio" name="image"><i
                             class="glyphicon glyphicon-ok"></i></span></label>
                     </div>
                 </div>
@@ -115,7 +118,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>What is the biggest opportunity for digital to help you and your team?</h2>
-                <textarea class="form-control" rows="8" placeholder="Type here..."></textarea>
+                <textarea id="third_textarea" class="form-control" rows="8" placeholder="Type here..."></textarea>
             </div>
         </div>
     </div>
@@ -140,19 +143,19 @@
 
                 <div class="row">
                     <div class="col-xs-4 col-md-4">
-                        <div class="checkbox">
+                        <div class="checkbox" id="fourth_radio_1">
                             <label><input type="checkbox" value="first"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>e-auction</label>
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-4">
-                        <div class="checkbox">
+                        <div class="checkbox" id="fourth_radio_2">
                             <label><input type="checkbox" value="second"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>eRFX</label>
                         </div>
                     </div>
                     <div class="col-xs-4 col-md-4">
-                        <div class="checkbox">
+                        <div class="checkbox" id="fourth_radio_3">
                             <label><input type="checkbox" value="third"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Procure to pay</label>
                         </div>
@@ -160,19 +163,19 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="checkbox">
+                        <div class="checkbox" id="fourth_radio_4">
                             <label><input type="checkbox" value="fourth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Spend analysis (cube available
                                 on an app)</label>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-4">
+                    <div class="col-xs-6 col-md-4" id="fourth_radio_5">
                         <div class="checkbox">
                             <label><input type="checkbox" value="fifth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Negotiation apps</label>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-md-4">
+                    <div class="col-xs-6 col-md-4" id="fourth_radio_6">
                         <div class="checkbox">
                             <label><input type="checkbox" value="sixth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Industry sourcing
@@ -181,7 +184,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
+                    <div class="col-md-6 col-md-offset-3" id="fourth_radio_7">
                         <div class="checkbox">
                             <label><input type="checkbox" value="seventh"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Online consumption / demand
@@ -192,7 +195,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <input class="form-control input-lg" placeholder="Other : Type here..."/>
+                        <input type="text" class="form-control input-lg" id="fourth_textbox_8" placeholder="Other : Type here..."/>
                     </div>
                 </div>
 
@@ -223,9 +226,9 @@
 
                 <form>
                     <div class="row">
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
-                        <div class="col-md-4"><input type="text" class="form-control input-lg"></div>
+                        <div class="col-md-4"><input type="text" id="fifth_txtbox_1" class="form-control input-lg"/></div>
+                        <div class="col-md-4"><input type="text" id="fifth_txtbox_2" class="form-control input-lg"/></div>
+                        <div class="col-md-4"><input type="text" id="fifth_txtbox_3" class="form-control input-lg"/></div>
                     </div>
                 </form>
             </div>
@@ -252,7 +255,7 @@
 
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <div class="radio">
+                        <div class="radio" id="sixth_radio_1">
                             <label><input type="radio" value="first" name="sixth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Never</label>
                         </div>
@@ -261,7 +264,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="radio">
-                            <label><input type="radio" value="second" name="sixth"><i
+                            <label id="sixth_radio_2"><input type="radio" value="second" name="sixth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Within the last 3
                                 months</label>
                         </div>
@@ -271,7 +274,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <div class="radio">
-                            <label><input type="radio" value="third" name="sixth"><i
+                            <label id="sixth_radio_3"><input type="radio" value="third" name="sixth"><i
                                     class="glyphicon glyphicon-ok checked pull-left"></i>Yesterday</label>
                         </div>
                     </div>
@@ -286,13 +289,133 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-right">
-                    <a href="agenda.html" class="button scroll"><i class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;Next</a>
+                    <a href="agenda.html" id="finalsubmit" onclick="Finalsubmit()" class="button scroll"><i class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;Next</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+<span style="display:none">
+<input type="text" id="final_second_response">
+<input type="text" id="final_sixth_response">
+<input type="text" id="final_fourth_response">
+</span>
+<!-- <script src="components/jquery-1.11.1.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="components/scroll.min.js"></script>
+<script type="text/javascript">
+
+        $('#img_1').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(1)
+        });
+
+        $('#img_2').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(2)
+        });
+
+        $('#img_3').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(3)
+        });
+
+        $('#img_4').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(4)
+        });
+
+        $('#img_5').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(5)
+        });
+
+        $('#img_6').on('click', function () {
+            $("#final_second_response").val('')
+            $("#final_second_response").val(6)
+        });
+
+
+        $('#sixth_radio_1').on('click', function () {
+               $("#final_sixth_response").val('')
+               $("#final_sixth_response").val(1)
+        });
+
+        $('#sixth_radio_2').on('click', function () {
+               $("#final_sixth_response").val('')            
+               $("#final_sixth_response").val(2)
+        });
+
+        $('#sixth_radio_3').on('click', function () {
+               $("#final_sixth_response").val('')            
+               $("#final_sixth_response").val(3)
+        });
+
+
+        $('#fourth_radio_1').on('click', function () {               
+            document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 1;            
+        });
+
+        $('#fourth_radio_2').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 2;
+        });
+
+        $('#fourth_radio_3').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 3;
+        });
+
+        $('#fourth_radio_4').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 4;
+        });
+
+        $('#fourth_radio_5').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 5;
+        });
+
+        $('#fourth_radio_6').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 6;
+        });
+
+        $('#fourth_radio_7').on('click', function () {               
+               document.getElementById("final_fourth_response").value =   document.getElementById("final_fourth_response").value + 7;
+        });
+
+
+
+        function Finalsubmit(){
+                //Page sixth
+
+                var finalfirstresponse_1 = $("#first_textbox_1").val()
+                var finalfirstresponse_2 = $("#first_textbox_2").val()
+                var finalfirstresponse_3 = $("#first_textbox_3").val()
+
+                var finalsedcondresponse = $("#final_second_response").val()
+
+                var finalthirdresponse = $("#third_textarea").val()
+
+                var finalfourthresponse = $("#final_fourth_response").val();
+                var final_fourth_text = $("#fourth_textbox_8").val()
+
+                var finalfifthresponse_1 = $("#fifth_txtbox_1").val()
+                var finalfifthresponse_2 = $("#fifth_txtbox_2").val()
+                var finalfifthresponse_3 = $("#fifth_txtbox_3").val()
+
+                var finalsixresponse = $("#final_sixth_response").val()
+                
+                
+
+                var xmlhttp;
+                if (window.XMLHttpRequest){
+                  xmlhttp=new XMLHttpRequest();
+                  }
+                else  {
+                  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                  }
+                
+                xmlhttp.open("GET","https://esurveydesigns.com/wix/p45445307.aspx?__qid=i77&finalfirstresponse_1="+finalfirstresponse_1+ "&finalfirstresponse_2="+ finalfirstresponse_2 + "&finalfirstresponse_3="+ finalfirstresponse_3 + "&finalsedcondresponse="+ finalsedcondresponse + "&finalthirdresponse="+ finalthirdresponse + "&finalfourthresponse="+ finalfourthresponse + "&final_fourth_text="+ final_fourth_text + "&finalfifthresponse_1="+ finalfifthresponse_1 + "&finalfifthresponse_2="+ finalfifthresponse_2 + "&finalfifthresponse_3="+ finalfifthresponse_3 + "&finalsixresponse="+ finalsixresponse,true);
+                xmlhttp.send();
+        };
+
+</script>
 </body>
 </html>
