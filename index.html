@@ -22,7 +22,7 @@
           <div class="col-md-6 col-md-offset-3">
             <section class="login-box">
               <h1><span>CPO</span> Roundtable</h1>
-              <form action="questions.html">
+              <form>
                 <input type="text" class="form-control input-lg" id="username1" placeholder="Username">
                 <input type="text" class="form-control input-lg" id="password1" placeholder="Password"/>
                 <input type="text" class="form-control input-lg" id="name1" placeholder="Name"/>
@@ -36,7 +36,10 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript">
         $('#AuthenticationCheck').on('click', function (e) {
-                if(((document.getElementById("username1").value).toLowerCase() =="cpo") || ((document.getElementById("password1").value).toLowerCase)=="password"){
+                if(((document.getElementById("username1").value).toLowerCase() =="cpo") && ((document.getElementById("password1").value).toLowerCase())=="password"){
+                  debugger;
+                    window.location.href = "questions.html?name=" + $("#name1").val()
+                    return false
                 }else{
                     alert("Please check your login details")
                     e.preventDefault();

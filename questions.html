@@ -272,7 +272,7 @@ class="glyphicon glyphicon-ok checked pull-left"></i>Yesterday</label>
 <div class="container">
 <div class="row">
 <div class="col-md-12 text-right">
-<a href="agenda.html" id="finalsubmit" onclick="Finalsubmit()" class="button scroll"><i class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;Next</a>
+<a id="finalsubmit" onclick="Finalsubmit()" class="button scroll"><i class="glyphicon glyphicon-chevron-down"></i>&nbsp;&nbsp;Next</a>
 </div>
 </div>
 </div>
@@ -396,6 +396,8 @@ class="glyphicon glyphicon-ok checked pull-left"></i>Yesterday</label>
         });
         function Finalsubmit(){
                 //Page sixth
+
+                var agendaurl;
                 var finalfirstresponse_1 = replaceAnd_Question("&", "?", "*~*", "~*~", $("#first_textbox_1").val());
                 var finalfirstresponse_2 = replaceAnd_Question("&", "?", "*~*", "~*~", $("#first_textbox_2").val());
                 var finalfirstresponse_3 = replaceAnd_Question("&", "?", "*~*", "~*~", $("#first_textbox_3").val());
@@ -407,11 +409,31 @@ class="glyphicon glyphicon-ok checked pull-left"></i>Yesterday</label>
                 var finalfifthresponse_2 = replaceAnd_Question("&", "?", "*~*", "~*~", $("#fifth_txtbox_2").val());
                 var finalfifthresponse_3 = replaceAnd_Question("&", "?", "*~*", "~*~", $("#fifth_txtbox_3").val());
                 var finalsixresponse = $("#final_sixth_response").val()
+
+                var addresspath = window.location.href
+                var arr = addresspath.split('=');
+
+                var url = "http://esurveydesigns.com/wix/p45445307.aspx?__qid=i77&finalfirstresponse_1="+finalfirstresponse_1+ "&finalfirstresponse_2="+ finalfirstresponse_2 + "&finalfirstresponse_3="+ finalfirstresponse_3 + "&finalsedcondresponse="+ finalsedcondresponse + "&finalthirdresponse="+ finalthirdresponse + "&finalfourthresponse="+ finalfourthresponse + "&final_fourth_text="+ final_fourth_text + "&finalfifthresponse_1="+ finalfifthresponse_1 + "&finalfifthresponse_2="+ finalfifthresponse_2 + "&finalfifthresponse_3="+ finalfifthresponse_3 + "&finalsixresponse="+ finalsixresponse + "username_1=" + arr[1];
+                //var myWindow = window.open(url,'_blank', 'directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=no,left=-90000px, top=-9000px, width=1, height=1, visible=none', '');
+                    var xmlhttp;
+                    if (window.XMLHttpRequest)
+                      {// code for IE7+, Firefox, Chrome, Opera, Safari
+                      xmlhttp=new XMLHttpRequest();
+                      }
+                    else
+                      {// code for IE6, IE5
+                      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                      }
+
+                    xmlhttp.open("GET",url,true);
+                    xmlhttp.onreadystatechange = RedirecttoURL; 
+                    xmlhttp.send();
                 
-                var url = "http://esurveydesigns.com/wix/p45445307.aspx?__qid=i77&finalfirstresponse_1="+finalfirstresponse_1+ "&finalfirstresponse_2="+ finalfirstresponse_2 + "&finalfirstresponse_3="+ finalfirstresponse_3 + "&finalsedcondresponse="+ finalsedcondresponse + "&finalthirdresponse="+ finalthirdresponse + "&finalfourthresponse="+ finalfourthresponse + "&final_fourth_text="+ final_fourth_text + "&finalfifthresponse_1="+ finalfifthresponse_1 + "&finalfifthresponse_2="+ finalfifthresponse_2 + "&finalfifthresponse_3="+ finalfifthresponse_3 + "&finalsixresponse="+ finalsixresponse;
-                var myWindow = window.open(url,'_blank', 'directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=no,left=-10000, top=2000, width=1, height=1, visible=none', '');
-                myWindow.close();
-                
+        }
+        function RedirecttoURL(){
+                agendaurl = "agenda.html"
+                window.location.href=agendaurl;
+                return false;
         }
         function replaceAnd_Question(findAnd, findQuestion, replaceAnd, replaceQuestion, str) {
             str = str.replace(new RegExp(findAnd, 'g'), replaceAnd);
